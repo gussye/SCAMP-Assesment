@@ -1,0 +1,15 @@
+let num;
+function fibonacci(num) {
+  let value = 1;
+  let sequence = [1];
+  for(let i = 0; i < num-1; i++) {
+    if (sequence.length < 2){
+      sequence.push(value);
+  } else {
+      value = sequence[i]+sequence[i-1];
+      sequence.push(value);
+    }
+  }
+  return sequence;
+}
+fibonacci(10);
